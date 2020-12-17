@@ -1,13 +1,33 @@
+def fibonacci(n):
+    if n < 0:
 
-def fibonacciSeries():
-    N = int(input("Number of elements in Fibonacci Series, N, (N>=2) : "))
+        print("Please try again")
+    elif n < 2:
 
-    fib_list = [0, 1]
+        return n
+    else:
 
-    if N > 2:
-    for i in range(2, N):
-        fib_num = fib_list[i-1] + fib_list[i-2]
-        # append the element to the series
-    fib_list.append(fib_num)
+        return fibonacci(n-1) + fibonacci(n-2)
 
-    print(fib_list)
+
+def lucas(n):
+
+    if n < 0:
+
+        print("Please try again")
+    elif n == 0:
+
+        return 2
+    elif n == 1:
+
+        return 1
+    else:
+        return lucas(n-1) + lucas(n-2)
+
+def sum_series(n, x=0, y=1): 
+    
+    for n in range(n):
+        x, y = y, x + y
+    return x        
+
+#code review help with my refactor
